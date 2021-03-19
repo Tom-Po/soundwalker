@@ -9,10 +9,10 @@ body {
   background-color: $light-purple;
 }
 
-div[class^="part-"],
-div[class*=" part-"] {
-  padding: 2rem 0;
-}
+// div[class^="part-"],
+// div[class*=" part-"] {
+//   padding: 2rem 0;
+// }
 
 .part-content {
   display: flex;
@@ -22,17 +22,7 @@ div[class*=" part-"] {
 .part-trends {
   position: relative;
   overflow: hidden;
-  margin-bottom: 200px;
 
-  h5 {
-    font-size: 32px;
-    text-align: center;
-    text-transform: uppercase;
-    font-style: italic;
-    letter-spacing: 0.27em;
-    color: $dark-purple;
-    margin-bottom: 80px;
-  }
   .trending-cards {
     min-height: 664px;
   }
@@ -58,8 +48,10 @@ div[class*=" part-"] {
   }
 }
 .part-trends,
+.part-bestof,
 .part-podcast-library {
   overflow: hidden;
+  margin-bottom: 200px;
   &:after {
     content: "";
     background: $overlay-gradient;
@@ -93,7 +85,19 @@ div[class*=" part-"] {
 }
 .part-podcast-library {
   position: relative;
-  min-height: 1000px;
+  .section-heading {
+    padding-top: 60px;
+    margin-bottom: 138px;
+  }
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    .btn {
+      font-size: 24px;
+      font-style: normal;
+      letter-spacing: 0.07em;
+    }
+  }
   &:after {
     content: "";
     position: absolute;
@@ -124,5 +128,37 @@ div[class*=" part-"] {
     opacity: 0.15;
     pointer-events: none;
     z-index: -1;
+  }
+}
+
+.part-bestof {
+  position: relative;
+  h5 {
+    margin-bottom: 120px;
+  }
+  .bg-image {
+    transform: scale(0.5) translate(-80%, -75%);
+  }
+  &:before {
+    content: "SOUNDWALKER";
+    color: $primary;
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 16vw;
+    font-family: $headings-font-family;
+    letter-spacing: 0.07em;
+    line-height: 1;
+    top: 0;
+    left: 5rem;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: -1;
+  }
+  > .bestof {
+    display: flex;
+    align-items: stretch;
+  }
+  .section-heading {
+    padding: 0 80px 0 140px;
   }
 }
