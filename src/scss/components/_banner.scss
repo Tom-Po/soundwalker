@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-bottom: 190px;
+  margin-bottom: 200px;
   header {
     position: absolute;
     top: 0;
@@ -86,10 +86,12 @@
         flex-direction: column;
         align-items: flex-start;
         font-size: 32px;
+        letter-spacing: 0.07em;
         padding: 0;
         .fancy-text {
           text-transform: capitalize;
           font-size: 40px;
+          letter-spacing: normal;
         }
       }
     }

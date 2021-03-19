@@ -7,6 +7,10 @@
   src: url("/fonts/Morganite-SemiBold.ttf") format("truetype");
 }
 @font-face {
+  font-family: "Morganite Book";
+  src: url("/fonts/Morganite-Book.ttf") format("truetype");
+}
+@font-face {
   font-family: "Antro Vectra";
   src: url("/fonts/Antro_Vectra.otf") format("opentype");
 }
@@ -36,6 +40,8 @@
 
 // Components
 @import "components/banner.scss";
+@import "components/podcast-card";
+@import "components/trendin-card";
 @import "components/album-cards.scss";
 
 /* Only for debug propose */

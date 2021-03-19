@@ -12,6 +12,10 @@ window.Kernel.registerComponent(
   "Loader",
   require("./components/Loader").default
 );
+window.Kernel.registerComponent(
+  "GliderCarousel",
+  require("./components/GliderCarousel").default
+);
 
 window.Kernel.mountComponents($("body"));
 

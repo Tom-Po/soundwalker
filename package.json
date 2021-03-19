@@ -8,6 +8,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.4.0",
+    "glider-js": "^1.7.7",
     "icon-font-generator": "^2.1.10",
     "jquery": "^3.4.1",
     "material-icons": "^0.3.1",

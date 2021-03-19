@@ -14,6 +14,11 @@ header {
     text-decoration: none;
     position: relative;
     padding: 1rem 0;
+    &:hover {
+      svg {
+        opacity: 0.35;
+      }
+    }
     svg {
       bottom: 0;
       left: 50%;
@@ -22,6 +27,7 @@ header {
       top: 50%;
       transform: translate(-50%, -50%);
       z-index: -1;
+      transition: opacity 200ms ease;
     }
     div {
       line-height: 0.9;
@@ -40,5 +46,6 @@ header {
   }
   .btn {
     font-size: 24px;
+    letter-spacing: 0.07em;
   }
 }
