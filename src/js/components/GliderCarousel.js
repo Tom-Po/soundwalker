@@ -3,13 +3,30 @@ const Glider = require("glider-js/glider");
 export default class GliderCarousel {
   constructor($view) {
     this.view = $view;
+    this.cards = $view.find(".card");
     this.bind();
   }
   bind() {
+    let self = this;
+    let show = this.view.data("show");
+
+    if (!show) {
+      show = 3;
+    }
+
+    this.cards.each((i, el) => {
+      $(el).on("click", () => {
+        self.cards.each((i, elem) => {
+          $(elem).removeClass("active");
+        });
+        $(el).addClass("active");
+      });
+    });
+
     new Glider(this.view[0], {
       // `auto` allows automatic responsive
       // width calculations
-      slidesToShow: 3,
+      slidesToShow: show,
       slidesToScroll: 1,
 
       // should have been named `itemMinWidth`
@@ -62,16 +79,23 @@ export default class GliderCarousel {
       // Glider.js breakpoints are mobile-first
       responsive: [
         {
+          breakpoint: 1700,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1,
+          },
+        },
+        {
           breakpoint: 900,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 2,
             slidesToScroll: 1,
           },
         },
         {
           breakpoint: 575,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 1,
             slidesToScroll: 1,
           },
         },

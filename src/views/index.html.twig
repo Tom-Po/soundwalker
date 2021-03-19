@@ -100,7 +100,7 @@
   </div>
   <h5>Hear what’s trending in the Soundwalker community</h5>
   <div class="trending-cards">
-    <div class="glider-js-wrapper" data-mount="GliderCarousel">
+    <div class="glider-js-wrapper" data-mount="GliderCarousel" data-show="4">
       <div class="card trending-card">
         <div class="inner">
           <div class="card-head">
@@ -372,152 +372,144 @@
         <div>Top Artists</div>
       </h2>
     </div>
-    <div class="glider-js-bestof" data-mount="GliderCarousel">
-      <div class="card trending-card">
+    <div class="glider-js-bestof" data-mount="GliderCarousel" data-show="4">
+      {% for i in 1..6 %}
+      <div class="card bestof-card">
         <div class="inner">
           <div class="card-head">
-            <div>
-              <div>XL Recordings</div>
-              <div class="number">01</div>
-            </div>
             <div class="thumb">
               <img
-                src="https://images-na.ssl-images-amazon.com/images/I/61ZQxQke2rL._SL1203_.jpg"
+                src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Snarkypuppy-photo-michalgarcia.jpg"
                 alt=""
               />
             </div>
           </div>
           <div class="card-body">
-            <div class="artist">Ratatat</div>
-            <div class="album">Classics</div>
+            <div class="number">01</div>
+            <div class="text">
+              <div class="artist">Snarky Puppy</div>
+              <div class="album">
+                Snarky Puppy is an American instrumental ensemble[1] led by
+                bassist Michael League. Snarky Puppy combines a ...
+              </div>
+            </div>
           </div>
           <div class="card-footer">
             <div class="actions">
-              <a href="#">
-                <span>Listen</span>
-                <span class="material-icons-outlined"> play_arrow </span>
-              </a>
-              <a href="#">Share</a>
+              <a href="#">More about</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="card trending-card">
+      <div class="card bestof-card">
         <div class="inner">
           <div class="card-head">
-            <div>
-              <div>XL Recordings</div>
-              <div class="number">01</div>
-            </div>
             <div class="thumb">
               <img
-                src="https://images-na.ssl-images-amazon.com/images/I/61ZQxQke2rL._SL1203_.jpg"
+                src="http://4.bp.blogspot.com/-bSQIwNGJfoI/VS3Wj9L9r4I/AAAAAAAAMAA/T2dm0QXce4M/s1700/1429043708725.jpg"
                 alt=""
               />
             </div>
           </div>
           <div class="card-body">
-            <div class="artist">Ratatat</div>
-            <div class="album">Classics</div>
+            <div class="number">02</div>
+            <div class="text">
+              <div class="artist">Ratatat</div>
+              <div class="album">
+                Ratatat is a Brooklyn-based electronic rock duo consisting of
+                Mike Stroud (guitar, melodica, synthesizers...
+              </div>
+            </div>
           </div>
           <div class="card-footer">
             <div class="actions">
-              <a href="#">
-                <span>Listen</span>
-                <span class="material-icons-outlined"> play_arrow </span>
-              </a>
-              <a href="#">Share</a>
+              <a href="#">More about</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="card trending-card">
+      <div class="card bestof-card">
         <div class="inner">
           <div class="card-head">
-            <div>
-              <div>XL Recordings</div>
-              <div class="number">01</div>
-            </div>
             <div class="thumb">
               <img
-                src="https://images-na.ssl-images-amazon.com/images/I/61ZQxQke2rL._SL1203_.jpg"
+                src="https://i.ytimg.com/vi/G-7U-FDql1A/sddefault.jpg"
                 alt=""
               />
             </div>
           </div>
           <div class="card-body">
-            <div class="artist">Ratatat</div>
-            <div class="album">Classics</div>
+            <div class="number">03</div>
+            <div class="text">
+              <div class="artist">Gorillaz</div>
+              <div class="album">
+                Gorillaz are an English virtual band created in 1998 by musician
+                Damon Albarn and artist Jamie Hewlett...
+              </div>
+            </div>
           </div>
           <div class="card-footer">
             <div class="actions">
-              <a href="#">
-                <span>Listen</span>
-                <span class="material-icons-outlined"> play_arrow </span>
-              </a>
-              <a href="#">Share</a>
+              <a href="#">More about</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="card trending-card">
+      <div class="card bestof-card">
         <div class="inner">
           <div class="card-head">
-            <div>
-              <div>XL Recordings</div>
-              <div class="number">01</div>
-            </div>
             <div class="thumb">
               <img
-                src="https://images-na.ssl-images-amazon.com/images/I/61ZQxQke2rL._SL1203_.jpg"
+                src="https://lecanalauditif.ca/wp-content/uploads/2018/01/b4421731b1edda8b8cc56bd74059305e3d3d3baf.jpg"
                 alt=""
               />
             </div>
           </div>
           <div class="card-body">
-            <div class="artist">Ratatat</div>
-            <div class="album">Classics</div>
+            <div class="number">04</div>
+            <div class="text">
+              <div class="artist">Death Grips</div>
+              <div class="album">
+                Death Grips is an American experimental hip hop band formed in
+                2010 in Sacramento, California...
+              </div>
+            </div>
           </div>
           <div class="card-footer">
             <div class="actions">
-              <a href="#">
-                <span>Listen</span>
-                <span class="material-icons-outlined"> play_arrow </span>
-              </a>
-              <a href="#">Share</a>
+              <a href="#">More about</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="card trending-card">
+      <div class="card bestof-card">
         <div class="inner">
           <div class="card-head">
-            <div>
-              <div>XL Recordings</div>
-              <div class="number">01</div>
-            </div>
             <div class="thumb">
               <img
-                src="https://images-na.ssl-images-amazon.com/images/I/61ZQxQke2rL._SL1203_.jpg"
+                src="https://classicalbumsundays.com/wp-content/uploads/2016/06/ftcms-3a76ddd8-0298-11e8-9e12-af73e8db3c71.jpg"
                 alt=""
               />
             </div>
           </div>
           <div class="card-body">
-            <div class="artist">Ratatat</div>
-            <div class="album">Classics</div>
+            <div class="number">05</div>
+            <div class="text">
+              <div class="artist">Massive Attack</div>
+              <div class="album">
+                Massive Attack are an English electronic band formed in 1988 in
+                Bristol, England, by Robert "3D" Del Naja...
+              </div>
+            </div>
           </div>
           <div class="card-footer">
             <div class="actions">
-              <a href="#">
-                <span>Listen</span>
-                <span class="material-icons-outlined"> play_arrow </span>
-              </a>
-              <a href="#">Share</a>
+              <a href="#">More about</a>
             </div>
           </div>
         </div>
       </div>
+      {% endfor %}
     </div>
   </div>
 </div>
