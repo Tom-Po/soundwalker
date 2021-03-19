@@ -6,6 +6,7 @@ html,
 body {
   height: 100%;
   margin: 0;
+  background-color: $light-purple;
 }
 
 div[class^="part-"],
@@ -17,4 +18,31 @@ div[class*=" part-"] {
   display: flex;
   flex-flow: column;
   height: 100%;
+}
+.part-trends {
+  position: relative;
+  .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  h5 {
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 0.27em;
+    color: $dark-purple;
+    margin-bottom: 80px;
+  }
+  .trending-cards {
+    min-height: 50vh;
+  }
 }

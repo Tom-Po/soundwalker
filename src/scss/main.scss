@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "Morganite";
+  src: url("/fonts/Morganite-medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Morganite semibold";
+  src: url("/fonts/Morganite-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Antro Vectra";
+  src: url("/fonts/Antro_Vectra.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Rflex";
+  src: url("/fonts/R-FLEX-REGULAR.otf") format("opentype");
+}
+
 @import "abstracts/variables";
 @import "abstracts/mixins";
 
@@ -17,7 +35,8 @@
 @import "layout/footer";
 
 // Components
-// @import "components/...";
+@import "components/banner.scss";
+@import "components/album-cards.scss";
 
 /* Only for debug propose */
 //@import "debug";

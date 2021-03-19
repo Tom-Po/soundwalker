@@ -1,0 +1,168 @@
+.banner {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 190px;
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 100;
+    .inner {
+      padding: 40px 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  h1 {
+    font-size: 104px;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .main {
+    background-color: rgba($primary, 0.5);
+    background-blend-mode: lighten;
+    background-image: url("/img/bg-header@2x.jpg");
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+    height: 66vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 80px;
+    color: $dark-purple;
+
+    &:after,
+    &:before {
+      content: "";
+      background: $overlay-gradient;
+      background-position: center;
+      background-size: contain;
+      position: absolute;
+      height: 75vh;
+      width: 75vh;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    &::before {
+      top: 50%;
+      left: 0;
+    }
+    &::after {
+      height: 100vh;
+      width: 100vh;
+      top: 25%;
+      right: -10%;
+    }
+    .content {
+      z-index: 100;
+      max-width: 730px;
+      padding-top: 5rem;
+      margin-right: auto;
+      &:before {
+        content: "Soundwalker";
+        color: $primary;
+        position: absolute;
+        text-transform: uppercase;
+        font-size: 32vw;
+        font-family: $headings-font-family;
+        letter-spacing: 0.07em;
+        line-height: 1;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        opacity: 0.15;
+        pointer-events: none;
+      }
+      .action {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 32px;
+        padding: 0;
+        .fancy-text {
+          text-transform: capitalize;
+          font-size: 40px;
+        }
+      }
+    }
+  }
+  .playlist {
+    height: 34vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    color: $dark-purple;
+
+    > div {
+      flex-basis: 50%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      padding: 40px 80px;
+
+      h4 {
+        display: block;
+        transform: translateX(-100%) rotate(-90deg);
+        transform-origin: top right;
+        padding-right: 3rem;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-family: "Rflex", sans-serif;
+      }
+      .artwork-card {
+        flex-grow: 1;
+        padding-left: 80px;
+      }
+    }
+    .top-20,
+    .top-category {
+      position: relative;
+
+      > div:first-of-type {
+        position: absolute;
+        top: 2rem;
+        left: 80px;
+      }
+    }
+    .top-category {
+      z-index: 10;
+      &::before {
+        content: "";
+        width: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        background-color: $lighter-purple;
+        transition: all 300ms ease-out;
+        z-index: -1;
+      }
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+        .artwork-card {
+          .artwork {
+            &:before {
+              transform: translateX(-50%) rotate(28deg) scale(0.99);
+            }
+          }
+        }
+      }
+    }
+    .top-20 {
+      background-color: $lighter-purple;
+    }
+  }
+}
